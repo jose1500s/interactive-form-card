@@ -1,0 +1,425 @@
+:root {
+    /* Primary */
+    --LinearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /* (active input border) */
+    --Red: hsl(0, 100%, 66%); /* ( input errors ) */
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 3%, 87%);
+    --DarkGrayishViolet: hsl(279, 6%, 55%);
+    --VeryDarkViolet: hsl(278, 68%, 11%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    background-color: var(--White);
+} 
+
+.main__container {
+    display: flex;
+}
+
+.cards {
+    width: 30%;
+}
+
+.gradient__container {
+    width: 30%;
+    height: 100vh;
+    background-image: url(../images/bg-main-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.frontCard {
+    width: 440px;
+    height: 245px;
+    position: relative;
+    background-image: url('../images/bg-card-front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    top: 200px;
+    left: 330px;
+    box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+    -webkit-box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+    -moz-box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+}
+
+#logoCard {
+    padding: 23px;
+}
+
+.numbers {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--White);
+    text-align: center;
+    margin-top: 34px;
+}
+
+.numbers p {
+    /* separar los numeros */
+    letter-spacing: 6px;
+}
+.name {
+    width: 60%;
+}
+.bottom {
+    /* para poner el nombre y la exp date en horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 70px;
+    max-width: 90%; 
+    /* margin: 20px 20px 20px 22px; */
+    margin: 14px 0 0 10px;
+}
+
+.backCard {
+    width: 440px;
+    height: 245px;
+    position: relative;
+    background-image: url('../images/bg-card-back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    top: 238px;
+    left: 431px;
+    box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+    -webkit-box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+    -moz-box-shadow: 11px 11px 16px -2px rgba(82,73,73,0.43);
+}
+
+.cvv {
+    position: absolute;
+    top: 110px;
+    left: 350px;
+    color: white;
+}
+
+.form__container {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: start;
+    gap: 5px;
+}
+#labelCard {
+    margin-top: 20px;
+}
+.bottomTitles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.bottomTitles .cvvTitle {
+    margin-right: 150px;
+}
+
+.bottomInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottomInfo #month,
+.bottomInfo #year {
+    width: 25%;
+}
+
+.bottomInfo #cvv {
+    width: 50%;
+}
+
+.infoCard input,
+.infoCard select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--DarkGrayishViolet);
+    font-size: 18px;
+}
+
+.infoCard input::placeholder,
+.infoCard select::placeholder{
+    color: var(--LightGrayishViolet);
+    font-size: 15px;
+}
+
+#confirmButton {
+    margin-top: 10px;
+    background-color: var(--VeryDarkViolet);
+    color: var(--White);
+    padding: 15px;
+    cursor: pointer;
+}
+
+#confirmButton:hover {
+    background-color: hsl(278, 65%, 16%);
+}
+
+/* media  querie Tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    #logoCard {
+        padding: 10px;
+        width: 80px;
+    }
+
+    .name {
+        width: 60%;
+    }
+
+    .frontCard {
+        width: 310px;
+        height: 170px;
+        top: 180px;
+        left: 30px;
+    }
+
+    .numbers {
+        font-size: 23px;
+        margin: 0;
+    }
+
+    .numbers p {
+        letter-spacing: 1px;
+    }
+
+    .bottom {
+        margin: 14px 0 0 9px;
+        gap: 35px;
+    }
+
+    .backCard {
+        width: 310px;
+        height: 170px;
+        top: 195px;
+        left: 72px;
+    }
+
+    .cvv {
+        top: 72px;
+        left: 240px
+    }
+
+    .infoCard {
+        width: 45%;
+        margin-right: 5em;
+    }
+    .bottomTitles .cvvTitle {
+        margin-right: 63px;
+    }
+
+    
+    .confirmationMessage h2 {
+        margin-top: 20px;
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .confirmationMessage p {
+        color: var(--DarkGrayishViolet);
+        margin-bottom: 25px;
+    }
+
+    .confirmationMessage input {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .confirmationMessage input:hover {
+        background-color: hsla(278, 68%, 11%, 0.801);
+    }
+}
+
+
+/* media  querie Smartphone */
+@media screen and (max-width: 767px) {
+    .main__container {
+        display: flex;
+        flex-direction: column;
+    }
+    .gradient__container {
+        width: 100%;
+        height: 35vh;
+    }
+    .name {
+        width: 60%;
+    }
+    .frontCard {
+        width: 322px;
+        height: 190px;
+        top: 145px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    #logoCard {
+        padding: 10px;
+        width: 85px;
+    }
+    .numbers {
+        margin-top: 4px;
+    }
+
+    .numbers p {
+        letter-spacing: 1px;
+    }
+
+    .bottom {
+        margin: 14px 0 0 0px;
+        gap: 35px;
+    }
+
+    .backCard {
+        width: 322px;
+        height: 190px;
+        top: -160px;
+        left: 54px;
+    }
+
+    .cvv {
+        top: 82px;
+        left: 257px;
+    }
+
+    .form__container {
+        width: 100%;
+        height: 65vh;
+        display: block;
+    }
+
+    .infoCard {
+        width: 90%;
+    }
+
+    .confirmationMessage {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .confirmationMessage h2 {
+        margin-top: 20px;
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .confirmationMessage p {
+        color: var(--DarkGrayishViolet);
+        margin-bottom: 25px;
+    }
+
+    .confirmationMessage input {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .confirmationMessage input:hover {
+        background-color: hsla(278, 68%, 11%, 0.801);
+    }
+
+    .bottomTitles .cvvTitle {
+        margin-right: 115px;
+    }
+}
+
+#btnContinue {
+    margin-top: 10px;
+    background-color: var(--VeryDarkViolet);
+    color: var(--White);
+    padding: 15px;
+    cursor: pointer; 
+}
+
+.confirmationMessage {
+    display: none;
+}
+
+.spinner {
+    display: none;
+}
+
+.centrar {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrarMobile {
+    margin: 0 auto;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mostrarConfirmacionMobile {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mostrarConfirmacionDesktop {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+.ocultar {
+    display: none;
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) and (max-width: 1660px) {
+    .frontCard {
+        top: 150px;
+        left: 225px;
+    }
+    .name {
+        width: 60%;
+    }
+    .bottom {
+        /* margin: 20px 20px 20px 22px; */
+        margin: 14px 0 0 10px;
+    }
+
+    .backCard {
+        top: 170px;
+        left: 305px;
+    }
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}

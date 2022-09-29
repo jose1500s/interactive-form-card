@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">  
+  <link rel="stylesheet" href="css/spinner.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
+  
+  <title>Interactive card details form</title>
+
+</head>
+<body>
+<div class="main__container">
+        <div class="gradient__container"></div>
+   <div class="cards">
+    <div class="frontCard">
+        <img src="images/card-logo.svg" alt="card logo" id="logoCard">
+        
+        <div class="numbers">
+            <p id="labelNumbers">0000 0000 0000 0000</p>
+        </div>
+        <div class="bottom">
+            <div class="name">
+                <p id="labelName">Jose Antonio Patiño Palomares</p>
+            </div>
+            <div class="expDate">
+                <p><span id="labelMes">00</span>/<span id="labelAnio">00</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="backCard">
+        <div class="cvv">
+            <p id="labelCvv">000</p>
+        </div>
+    </div>
+   </div>
+    <div class="form__container">
+        <div class="infoCard">
+            <label for="">Nombre en la tarjeta</label>
+            <input type="text" name="" id="nameOnCard" placeholder="E.j. Jane Appleseed">
+
+            <label for="" id="labelCard">Numeros de la tarjeta</label>
+            <input type="number" name="" id="cardNumber" placeholder="E.j. 1234 5678 9123 4567">
+            <div class="bottomTitles">
+                <label for="">Fecha Caducidad (MM/YY)</label>
+                <label for="" class="cvvTitle">CVV</label>
+            </div>
+            <div class="bottomInfo">
+                <!-- <input type="number" name="" id="month" placeholder="MM"> -->
+                <select name="" id="month">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <!-- <input type="number" name="" id="year" placeholder="YY"> -->
+                <select name="" id="year">
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+                <input type="number" name="" id="cvv" placeholder="E.g. 123"> 
+            </div>
+            <input type="submit" value="Confirmar" id="confirmButton">
+        </div>
+    </div>
+
+    <div class="confirmationMessage">
+        <img src="images/icon-complete.svg" alt="confirmation logo">
+        <h2>Listo!</h2>
+        <p>Agregamos los detalles de tu tarjeta</p>
+        <input type="button" value="Continuar" id="btnContinue">
+    </div>
+
+    <div class="spinner">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+
+</div>
+    <script src="js/app.js"></script>
+    <script src="js/validarForm.js"></script>
+    <script src="js/animacion.js"></script>
+</body>
+</html>
